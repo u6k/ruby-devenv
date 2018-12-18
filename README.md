@@ -55,6 +55,12 @@ textlintで文書チェックする場合、次のコマンドを実行します
 $ textlint --preset ja-technical-writing README.md
 ```
 
+RedPenで文書チェックする場合、次のコマンドを実行します。
+
+```
+$ redpen README.md
+```
+
 ## Maintainer
 
 - u6k
