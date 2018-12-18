@@ -3,9 +3,7 @@ LABEL maintainer="u6k.apps@gmail.com"
 
 # Install Softwares
 RUN apt update && \
-    apt -y install curl vim ruby rails git git-flow tig && \
-    apt autoremove && \
-    apt clean
+    apt -y install curl vim ruby rails git git-flow tig
 
 # Install Docker, docker-compose
 RUN apt-get update && \
@@ -14,8 +12,6 @@ RUN apt-get update && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && \
     apt-get update && \
     apt-get -y install docker-ce && \
-    apt-get autoremove && \
-    apt-get clean && \
     curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
 
@@ -24,6 +20,14 @@ COPY vimrc /root/.vimrc
 
 RUN curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh && \
     vim +NeoBundleInstall +qall
+
+# Install and Setting textlint
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install textlint --global && \
+    npm install textlint-rule-preset-ja-technical-writing --global
+
+COPY textlintrc /root/.textlintrc
 
 # Setting
 WORKDIR /var/my-app/

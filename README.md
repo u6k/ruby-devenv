@@ -49,6 +49,12 @@ $ ln -s ruby-editor.sh /usr/local/bin/ruby-editor.sh
 
 RubyやRailsのプロジェクト・フォルダで`ruby-editor.sh`を実行します。`ruby-editor`コンテナが起動して、`bash`プロンプトが表示されます。
 
+textlintで文書チェックする場合、次のコマンドを実行します。
+
+```
+$ textlint --preset ja-technical-writing README.md
+```
+
 ## Maintainer
 
 - u6k
