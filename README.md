@@ -61,6 +61,12 @@ RedPenで文書チェックする場合、次のコマンドを実行します�
 $ redpen README.md
 ```
 
+Rubocopでソースコードをチェックする場合、次のコマンドを実行します。
+
+```
+$ rubocop
+```
+
 ## Maintainer
 
 - u6k
