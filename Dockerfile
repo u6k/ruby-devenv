@@ -29,6 +29,13 @@ RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - && \
 
 COPY textlintrc /root/.textlintrc
 
+# Install RedPen
+RUN apt -y install openjdk-8-jre && \
+    cd /usr/local/src/ && \
+    curl -OL https://github.com/redpen-cc/redpen/releases/download/redpen-1.10.1/redpen-1.10.1.tar.gz && \
+    tar zxvf redpen-1.10.1.tar.gz && \
+    ln -s /usr/local/src/redpen-distribution-1.10.1/bin/redpen /usr/local/bin/redpen
+
 # Setting
 WORKDIR /var/my-app/
 
