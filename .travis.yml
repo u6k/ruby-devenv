@@ -1,0 +1,14 @@
+language: ruby
+cache: bundler
+
+addons:
+  apt:
+    packages:
+    - docker-ce
+
+script:
+  - docker build -t ruby-editor .
+
+notifications:
+  slack:
+    secure: GpkwCSLFmCE4gx3zntLJvY9UWYn7g25Myp76EqbgDT1eCxH+AHz8bAvdK/3xgaEomwB1ltm7SPDoNsaDQkc1jkJPwKeSJi03A0PDxY6QYreh2mggs/baQgvjm/isK3+yte1MymkdhaBiIBwLP9jKVY2CTKwyGy8DWTkvyrZjvnNW3cYpaeB4SsVY2LYnZwcrlwIkAGPICxUnd8eR14usUEJ+YPyoe0LRCNyTCnFbZY3AWOj7uQKOwY4nrqpjMJuWKoaNpr4EU39b9/TB5atVS6PAH2hynBzee9R0KNWqOeXBtY/N9klILk4lFTyHINfroefujhfWkhm6BeLySNWiGbiXxLpYJJs8Lxzfh61pGoVSF8GcZLe27hAOYBmlJBKyqdp3a+hthNaqPxB0URVbwTALNFQan/abhn0lihuWIStPD+xOmq1/J9GQ0Kpd/VVCR5XHANqenhT1ds8rvRrFh3TkTk2ThfsH2PE2LTVtR7dR1lZWQ59UaY+cYfCFCm1uAxEof6yRHSGnNYPbr37bD00zpCLScarcKpbJ58Yb4jvffQVn+OeQWcIgp4T9hCeRGtHDSoEnBd+hJRn4TEHU8s6fzEGAAWFBW80OdUvOEnov5hsEFXsoj1OJ8C2YRgk/0qj6RR3/K58ULBNa/VKTtGv51LcWocVeoMIO1ElvXUg=
