@@ -5,4 +5,4 @@ docker run --rm -it \
   -v $HOME/.bashrc:/root/.bashrc \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
   -v $(pwd):/var/my-app \
-  ruby-editor
+  ruby-devenv
