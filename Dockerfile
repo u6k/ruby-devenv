@@ -2,8 +2,8 @@ FROM debian
 LABEL maintainer="u6k.apps@gmail.com"
 
 # Install Softwares
-RUN apt update && \
-    apt -y install curl vim ruby ruby-dev rails git git-flow tig openjdk-8-jre
+RUN apt-get update && \
+    apt-get -y install curl vim ruby ruby-dev rails git git-flow tig openjdk-11-jre
 
 # Install Docker, docker-compose
 RUN apt-get update && \

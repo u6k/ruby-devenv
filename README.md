@@ -1,18 +1,14 @@
-# Ruby Editor _(ruby-editor)_
+# Ruby開発環境Dockerイメージ _(ruby-devenv)_
 
-[![Travis](https://img.shields.io/travis/u6k/ruby-editor.svg)](https://travis-ci.org/u6k/ruby-editor)
-[![license](https://img.shields.io/github/license/u6k/ruby-editor.svg)](https://github.com/u6k/ruby-editor/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/u6k/ruby-editor.svg)](https://github.com/u6k/ruby-editor/releases)
-[![Website](https://img.shields.io/website-up-down-green-red/https/redmine.u6k.me%2Fprojects%2Fos-setup.svg?label=u6k.Redmine)](https://redmine.u6k.me/projects/os-setup)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Travis](https://img.shields.io/travis/u6k/ruby-devenv.svg)](https://travis-ci.org/u6k/ruby-devenv) [![license](https://img.shields.io/github/license/u6k/ruby-devenv.svg)](https://github.com/u6k/ruby-devenv/blob/master/LICENSE) [![GitHub release](https://img.shields.io/github/release/u6k/ruby-devenv.svg)](https://github.com/u6k/ruby-devenv/releases) [![Website](https://img.shields.io/website-up-down-green-red/https/redmine.u6k.me%2Fprojects%2Fruby-devenv?label=u6k.Redmine)](https://redmine.u6k.me/projects/ruby-devenv) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-> Ruby開発環境のDockerコンテナー
+> Ruby開発環境のDockerイメージ
 
 ## Background
 
 PCやスマホなど様々な環境でアプリケーション開発作業を進めたいと考えています。が、各端末に開発環境をセットアップするのはメンドウですし、なるべくホストOSに影響しないようにしたいと考えます。
 
-そこで、開発環境をDockerコンテナとして構築します。当プロジェクトは、Ruby開発環境をDockerコンテナとして構築します。この開発環境は、次の機能を持ちます。
+そこで、当プロジェクトはRuby開発環境をDockerコンテナとして構築します。この開発環境は、次の機能を持ちます。
 
 - vim + 各種プラグインでソースコードを編集できます
 - Rubocop、textlint、RedPenなど各種チェックツールでソースコードやドキュメントをチェックできます
@@ -30,24 +26,24 @@ PCやスマホなど様々な環境でアプリケーション開発作業を進
 当リポジトリを`git clone`します。
 
 ```
-$ git clone git@github.com:u6k/ruby-editor.git
+$ git clone git@github.com:u6k/ruby-devenv.git
 ```
 
 Dockerイメージをビルドします。
 
 ```
-$ docker build -t ruby-editor .
+$ docker build -t ruby-devenv .
 ```
 
-`ruby-editor.sh`のリンクをパスが通っているフォルダに配置します。
+`ruby-devenv.sh`のリンクをパスが通っているフォルダに配置します。
 
 ```
-$ ln -s ruby-editor.sh /usr/local/bin/ruby-editor.sh
+$ ln -s ruby-devenv.sh /usr/local/bin/ruby-devenv.sh
 ```
 
 ## Usage
 
-RubyやRailsのプロジェクト・フォルダで`ruby-editor.sh`を実行します。`ruby-editor`コンテナが起動して、`bash`プロンプトが表示されます。
+RubyやRailsのプロジェクト・フォルダで`ruby-devenv.sh`を実行します。`ruby-devenv`コンテナが起動して、`bash`プロンプトが表示されます。
 
 textlintで文書チェックする場合、次のコマンドを実行します。
 
@@ -76,10 +72,10 @@ $ rubocop
 
 ## Contributing
 
-当プロジェクトに興味を持っていただき、ありがとうございます。[新しいIssueを作成](https://github.com/u6k/ruby-editor/issues/new)していただくか、プルリクエストをサブミットしていただけると幸いです。
+当プロジェクトに興味を持っていただき、ありがとうございます。[新しいチケットを作成](https://redmine.u6k.me/projects/ruby-devenv/issues)していただくか、プルリクエストをサブミットしていただけると幸いです。
 
 当プロジェクトは、[Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct)に準拠します。
 
 ## License
 
-[MIT License](https://github.com/u6k/ruby-editor/blob/master/LICENSE)
+[MIT License](https://github.com/u6k/ruby-devenv/blob/master/LICENSE)
